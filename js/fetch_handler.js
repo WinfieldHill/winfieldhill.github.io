@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('fetch_js_handler.mjs was run');   
+console.log('fetch_handler.js was run');   
   
 self.addEventListener('fetch', event => {
   console.log('Fetch event for ', event.request.url);
