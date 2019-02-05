@@ -1,4 +1,4 @@
-importScripts('./js/fetch_js_handler.js');
+importScripts('https://winfieldhill.github.io/js/fetch_js_handler.js');
 
 const filesToCache = [
    '/css/main.css',
