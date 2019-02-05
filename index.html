@@ -1,50 +1,42 @@
 <!DOCTYPE html>
 <html>
-
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Winfield Hill : Code Store" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Winfield Hill</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/WinfieldHill">View on GitHub</a>
-
-          <h1 id="project_title">Winfield Hill</h1>
-          <h2 id="project_tagline">Code Store</h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <pre><code>( function thisFunc() {
-    if( !( this instanceof thisFunc ) ) {
-        return new thisFunc();
-    };
-    this.href = "https://bitbucket.org/whill/";
-}() );
-</code></pre>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+	<head>
+		<title>Hank Quinlan, Horrible Cop</title>
+	</head>
+	<body>
+		<nav>
+    		<ul>
+        		<li><a href="/">Home</a></li>
+	        	<li><a href="/about">About</a></li>
+        		<li><a href="/cv">CV</a></li>
+        		<li><a href="/blog">Blog</a></li>
+    		</ul>
+		</nav>
+		<div class="container">
+    		<div class="blurb">
+        		<h1>Hi there, I'm Hank Quinlan!</h1>
+				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
+    		</div><!-- /.blurb -->
+		</div><!-- /.container -->
+		<footer>
+    		<ul>
+        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
+        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
+			</ul>
+		</footer>
+    <script type="module">
+        if ('serviceWorker' in navigator) {
+          console.log('Service Workers Supported');
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('https://dev03.lillypulitzer.com/on/demandware.static/Sites-lillypulitzer-us-Site/-/default/js/sw.js')
+              .then(swReg => {
+                console.log('Service worker registered', swReg);
+              })
+              .catch(err => {
+                console.error('Service worker error', err);
+              });
+          });
+        }
+    </script>
+	</body>
 </html>
