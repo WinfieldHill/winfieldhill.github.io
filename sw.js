@@ -29,7 +29,7 @@ self.addEventListener('activate', function(event) {
           // Return true if you want to remove this cache,
           // but remember that caches are shared across
           // the whole origin
-          if (cacheName != staticCacheName) {
+          if (cacheName !== staticCacheName) {
             return true; 
           };
         }).map(function(cacheName) {
