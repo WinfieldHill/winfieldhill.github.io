@@ -7,7 +7,7 @@ const filesToCache = [
   '/js/app.js'
 ];
 
-const staticCacheName = 'pages-cache-v2';
+const staticCacheName = 'pages-cache-v1';
 
 self.addEventListener('install', event => {
   console.log('In sw.js file v5');
