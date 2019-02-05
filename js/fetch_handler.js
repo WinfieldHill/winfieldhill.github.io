@@ -5,7 +5,7 @@ console.log('fetch_handler.js was run');
 self.addEventListener('fetch', event => {
   console.log('Fetch event for ', event.request.url);
   event.respondWith(
-    caches.match(event.request)
+    return caches.match(event.request)
       .then(response => {
         if (response) {
           console.log('Found ', event.request.url, ' in cache');
