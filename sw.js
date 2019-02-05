@@ -1,5 +1,8 @@
+import jsFetch from './js/fetch_js_handler.mjs'
+
 const filesToCache = [
-    '/'
+   '/css/main.css',
+   '/js/app.js'
 ];
 
 const staticCacheName = 'pages-cache-v1';
@@ -13,3 +16,5 @@ self.addEventListener('install', event => {
 	    })
 	  );
 });
+
+jsFetch();
