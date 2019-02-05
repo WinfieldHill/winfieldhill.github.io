@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>...</title>
-	</head>
-	<body>
-	<script type="module">
-		if ('serviceWorker' in navigator) {
-			console.log('Service Workers Supported');
-			window.addEventListener('load', () => {
-				navigator.serviceWorker.register('sw.js?v=1')
-				.then(swReg => {
-					console.log('Service worker registered!', swReg);
-				})
-				.catch(err => {
-					console.error('Service worker error', err);
-				});
-			});
-		}
-	</script>
-	</body>
+  <head>
+    <title>...</title>
+  </head>
+  <body>
+    <script type="module">
+      if ('serviceWorker' in navigator) {
+        console.log('Service Workers Supported');
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js?v=1')
+          .then(swReg => {
+            console.log('Service worker registered!', swReg);
+          })
+          .catch(err => {
+          console.error('Service worker error', err);
+          });
+        });
+      }
+    </script>
+  </body>
 </html>
