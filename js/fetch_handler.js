@@ -16,6 +16,7 @@ self.addEventListener('fetch', event => {
       })
       .then(response => {
         caches.put(event.request, response.clone());
+        return response;
       })
       .catch(error => {
         return '<h1>No page</h1>';
