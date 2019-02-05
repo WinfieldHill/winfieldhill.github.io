@@ -15,7 +15,7 @@ self.addEventListener('fetch', event => {
       return fetch(event.request).then(response => {
         caches.put(event.request.url, response.clone());
         return response;
-      };
+      });
     })
     .catch(error => {
 
