@@ -2,6 +2,7 @@ importScripts('https://winfieldhill.github.io/js/fetch_handler.js');
 
 const filesToCache = [
   '/',
+  'page1.html',
   '/css/main.css',
   '/js/fetch_handler.js',
   '/js/app.js'
