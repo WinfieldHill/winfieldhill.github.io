@@ -1,4 +1,4 @@
-import jsFetch from './js/fetch_js_handler.mjs'
+importScripts('./js/fetch_js_handler.js');
 
 const filesToCache = [
    '/css/main.css',
@@ -16,5 +16,3 @@ self.addEventListener('install', event => {
 	    })
 	  );
 });
-
-jsFetch();
