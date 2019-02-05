@@ -12,11 +12,10 @@ self.addEventListener('fetch', event => {
         return response;
       }
       console.log('Network request for ', event.request.url);
-      return fetch(event.request);
-    })
-    .then(response => {
-      caches.put(event.request.url, response.clone());
-      return response;
+      return fetch(event.request).then(response => {
+        caches.put(event.request.url, response.clone());
+        return response;
+      };
     })
     .catch(error => {
 
