@@ -12,9 +12,7 @@ const staticCacheName = 'pages-cache-v9';
 
 self.addEventListener('install', event => { 
   self.skipWaiting();
-  
   console.log('In sw.js file v5');
-  
   self.skipWaiting();
   event.waitUntil(
     caches.open(staticCacheName)
@@ -51,7 +49,7 @@ self.addEventListener('fetch', event => {
     caches.match(event.request)
     .then(response => {
         console.log('Found ', event.request.url, ' in cache');
-        return response ? response fetch(event.request);
+        return response ? response : fetch(event.request);
     })
     .then(response => {
       console.log('Network request for ', event.request.url);
