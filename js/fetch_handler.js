@@ -7,15 +7,15 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
     .then(response => {
-      if (response) {
         console.log('Found ', event.request.url, ' in cache');
-        return response;
-      }
+        return response ? response fetch(event.request);
+    })
+    .then(response => {
       console.log('Network request for ', event.request.url);
-      return fetch(event.request).then(response => {
+      caches.open('pages-cache-v8').then(cache => {
         cache.put(event.request.url, response.clone());
-        return response;
-      });
+        return response;  
+      })
     })
     .catch(error => {
 
