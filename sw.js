@@ -8,7 +8,7 @@ const filesToCache = [
   '/js/app.js'
 ];
 
-const staticCacheName = 'pages-cache-v6';
+const staticCacheName = 'pages-cache-v7';
 
 self.addEventListener('install', event => { 
   self.skipWaiting();
