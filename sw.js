@@ -1,4 +1,4 @@
-importScripts('https://winfieldhill.github.io/js/fetch_handler.js');
+//importScripts('https://winfieldhill.github.io/js/fetch_handler.js');
 
 const filesToCache = [
   '/',
@@ -8,7 +8,7 @@ const filesToCache = [
   '/js/app.js'
 ];
 
-const staticCacheName = 'pages-cache-v9';
+const staticCacheName = 'pages-cache-v10';
 
 self.addEventListener('install', event => { 
   self.skipWaiting();
