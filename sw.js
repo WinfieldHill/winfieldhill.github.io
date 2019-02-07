@@ -10,8 +10,11 @@ const filesToCache = [
 
 const staticCacheName = 'pages-cache-v6';
 
-self.addEventListener('install', event => {
+self.addEventListener('install', event => { 
+  self.skipWaiting();
+  
   console.log('In sw.js file v5');
+  
   self.skipWaiting();
   event.waitUntil(
     caches.open(staticCacheName)
