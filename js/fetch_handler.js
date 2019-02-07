@@ -13,7 +13,7 @@ self.addEventListener('fetch', event => {
       }
       console.log('Network request for ', event.request.url);
       return fetch(event.request).then(response => {
-        caches.put(event.request.url, response.clone());
+        cache.put(event.request.url, response.clone());
         return response;
       });
     })
