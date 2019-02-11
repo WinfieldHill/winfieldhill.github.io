@@ -43,25 +43,25 @@ self.addEventListener('activate', function(event) {
 });
 
  
-self.addEventListener('fetch', event => {
-  console.log('Fetch event for ', event.request.url);
-  event.respondWith(
-    caches.match(event.request)
-    .then(response => {
-        console.log('Found ', event.request.url, ' in cache');
-        return response ? response : fetch(event.request);
-    })
-    .then(response => {
-      console.log('Network request for ', event.request.url);
-      caches.open(staticCacheName).then(cache => {
-        cache.put(event.request.url, response.clone());
-        return response;  
-      })
-    })
-    .catch(error => {
+// self.addEventListener('fetch', event => {
+//   console.log('Fetch event for ', event.request.url);
+//   event.respondWith(
+//     caches.match(event.request)
+//     .then(response => {
+//         console.log('Found ', event.request.url, ' in cache');
+//         return response ? response : fetch(event.request);
+//     })
+//     .then(response => {
+//       console.log('Network request for ', event.request.url);
+//       caches.open(staticCacheName).then(cache => {
+//         cache.put(event.request.url, response.clone());
+//         return response;  
+//       })
+//     })
+//     .catch(error => {
 
-      // TODO 6 - Respond with custom offline page
+//       // TODO 6 - Respond with custom offline page
 
-    })
-  );
-});
+//     })
+//   );
+// });
