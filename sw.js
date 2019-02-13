@@ -8,7 +8,7 @@ const filesToCache = [
   '/js/app.js'
 ];
 
-const staticCacheName = 'pages-cache-v10';
+const staticCacheName = 'pages-cache-v11';
 
 self.addEventListener('install', event => { 
   self.skipWaiting();
@@ -42,6 +42,9 @@ self.addEventListener('activate', function(event) {
   );
 });
 
+self.addEventListener('message', msg => {
+  msg.source === 'service-worker' ? console.log(msg) : console.log('msg from elsewhere', msg);
+});
  
 // self.addEventListener('fetch', event => {
 //   console.log('Fetch event for ', event.request.url);
