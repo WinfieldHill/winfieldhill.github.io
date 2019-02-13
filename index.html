@@ -17,6 +17,24 @@
                 console.log('user is subscribed', subscription);
               } else {
                 console.log('user isn\'t subscribed', subscription);
+                const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
+                swRegistration.pushManager.subscribe({
+                  userVisibleOnly: true,
+                  applicationServerKey: 'BGD1Qb8E9g0hS56wF1D3qnme-eck1LMENvUzhcu7COzm_4LERsEKzsSXdoWvS4DNznJ-FkqnukLwL3j4ksJH3wg'
+                })
+                .then(function(subscription) {
+                  console.log('User is subscribed.');
+
+                  updateSubscriptionOnServer(subscription);
+
+                  isSubscribed = true;
+
+                  updateBtn();
+                })
+                .catch(function(err) {
+                  console.log('Failed to subscribe the user: ', err);
+                  updateBtn();
+                });
               };
             });
             
