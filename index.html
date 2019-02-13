@@ -37,14 +37,14 @@
               } else {
                 console.log('user isn\'t subscribed', subscription);
                 const applicationServerKey = urlB64ToUint8Array('urlB64ToUint8Array');
-                swRegistration.pushManager.subscribe({
+                swReg.pushManager.subscribe({
                   userVisibleOnly: true,
                   applicationServerKey: applicationServerKey
                 })
                 .then(function(subscription) {
                   console.log('User is subscribed.');
 
-                  updateSubscriptionOnServer(subscription);
+                  //updateSubscriptionOnServer(subscription);
 
                   isSubscribed = true;
 
