@@ -11,8 +11,15 @@
       if ('serviceWorker' in navigator) {
         console.log('Service Workers Supported');
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('https://winfieldhill.github.io/sw.js?v=7')
-          .then(swReg => {
+          navigator.serviceWorker.register('https://winfieldhill.github.io/sw.js?v=11').then(swReg => {
+            let swSub = swReg.pushManager.getSubscription().then(subscription => {
+              if (subscription) {
+                console.log('user is subscribed', subscription);
+              } else {
+                console.log('user isn\'t subscribed', subscription);
+              };
+            });
+            
             console.log('Service worker registered!', swReg);
           })
           .catch(err => {
